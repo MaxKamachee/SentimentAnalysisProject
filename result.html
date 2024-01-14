@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block title %}Review Result{% endblock %}
+
+{% block content %}
+    <h2>Review Result</h2>
+    <p>Review Text: {{ review.text }}</p>
+    <p>Sentiment: {{ review.sentiment }}</p>
+
+    <h3>Feedback Form</h3>
+    <form method="POST" action="{{ url_for('feedback', review_id=review.id) }}">
+        <label for="feedback">Provide feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br>
+        <input type="submit" value="Submit Feedback">
+    </form>
+
+    <p><a href="/">Back to Home</a></p>
+{% endblock %}
+
+

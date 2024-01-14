@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block title %}Movie Review Sentiment Analysis{% endblock %}
+
+{% block content %}
+    <h1>Movie Review Sentiment Analysis</h1>
+    <form method="POST" action="/">
+        <label for="review_text">Enter your movie review:</label><br>
+        <textarea id="review_text" name="review_text" rows="4" cols="50" required></textarea><br>
+        <input type="submit" value="Submit Review">
+    </form>
+{% endblock %}
